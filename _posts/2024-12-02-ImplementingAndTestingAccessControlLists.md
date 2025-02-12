@@ -6,8 +6,6 @@ categories:
   - Project
 last_modified_at: 2025-02-11
 ---
-# Implementing and Testing Access Control Lists (ACLs) in Linux
-
 ## Applying Access Control Lists
 
 ![1](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/1.png)
