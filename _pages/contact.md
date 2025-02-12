@@ -6,7 +6,6 @@ author_profile: true
 ---
 
 
-
 <div style="text-align: center; font-size: 24px;">
   <p><strong>CONTACT</strong> </p>
 </div>
@@ -18,5 +17,5 @@ author_profile: true
 </div>
 
 <div style="display: flex; justify-content: center; align-items: center;margin: 0 auto;">
-  <img src="/web_resources\Resume-Photo.png" style="max-width: 100%; height: auto; margin-bottom: 10px;" />
+  <img src="/web_resources/Resume-Photo.png" style="max-width: 100%; height: auto; margin-bottom: 10px;" />
 </div>
