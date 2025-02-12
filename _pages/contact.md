@@ -13,7 +13,7 @@ author_profile: true
 
 
 <div style="text-align: justify;">
-  <p><strong>If you are interested in any aspect of me, I would love to chat and collaborate, please contact me!</strong><br>
+  <p><strong>If you are interested, please contact me!</strong><br>
   <strong>Email:</strong> adehinmoyeemmanuel@gmail.com<br> </p>
 </div>
 
