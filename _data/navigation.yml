@@ -1,18 +1,18 @@
 # main links
 main:
-  - title: "CV"
-    url: https://huiguangwang.top/cv/
-  - title: "About"
-    url: https://huiguangwang.top
-  - title: "Project"
-    url: /project/
-  - title: "Publication"
-    url: /publication/
-  - title: "Award"
-    url: /award/
-  - title: "Video"
-    url: /video/
-  - title: "Post"
+#  - title: "CV"
+#    url: https://huiguangwang.top/cv/
+#  - title: "About"
+#    url: https://huiguangwang.top
+#  - title: "Project"
+#    url: /project/
+#  - title: "Publication"
+#    url: /publication/
+#  - title: "Award"
+#    url: /award/
+#  - title: "Video"
+#    url: /video/
+  - title: "Projects"
     url: /post/
   - title: "Contact"
     url: /contact/
