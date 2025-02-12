@@ -3,7 +3,7 @@ title: "Executing Queries in Splunk and Chronicles"
 classes: wide
 date: 2025-02-11
 categories: 
-  - Presentation
+  - Project
 last_modified_at: 2025-02-11
 ---
 ## Splunk
