@@ -8,8 +8,8 @@ main:
 #    url: /project/
 #  - title: "Publication"
 #    url: /publication/
-  - title: "About"
-    url: /about/
+#  - title: "About"
+#    url: /about/
 #  - title: "Video"
 #    url: /video/
   - title: "Projects"
