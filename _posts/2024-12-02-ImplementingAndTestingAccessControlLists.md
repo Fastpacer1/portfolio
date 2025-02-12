@@ -6,78 +6,67 @@ categories:
   - Project
 last_modified_at: 2025-02-11
 ---
-## Implementing and Testing Access Control Lists (ACLs) in Linux
+# Implementing and Testing Access Control Lists (ACLs) in Linux
 
-**Scenario:**
+## Applying Access Control Lists
 
-You are a security analyst working at the e-commerce store Buttercup Games. You've been tasked with identifying whether there are any possible security issues with the mail server. To do so, you must explore any failed SSH logins for the root account. 
+![1](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/1.png)
 
-Tasked with this scenario, I uploaded the provided log data into Splunk Cloud for analysis:
+> Figure 1: Applying Access Control Lists permission to the testfile for bob
 
-> I ran index="main" to confirm that the relevant data was ingested into the default index and is accessible for analysis. Additionally, I set the date range to "All time" to ensure all events, regardless of their timestamp, are included in the search:
+This figure shows the command sudo setfacl -m u:bob:rw testfile to Use Access Control Lists to grant specific permissions read/write access to bob.
 
-![Splunk2](https://fastpacer1.github.io/portfolio/assets/images/Splunk1.png)
+![2](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/2.png)
 
-> I examined the fields created by Splunk indexes data. These fields become a part of the searchable index event data:
+> Figure 1.2: Applying Access Control Lists permission to the testfile for alice
 
-![Splunk2](https://fastpacer1.github.io/portfolio/assets/images/Splunk2.png)
+This figure shows the command sudo setfacl -m u:alice:r testfile to use access control lists to grant specific permissions read-only access to alice
 
-The following fields are observed:
+![3](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/3.png)
 
-- host: The host field indicates the name of the network host where the event originated.
-- source: The source field specifies the file name where the event originated.
-- sourcetype: The sourcetype field determines how the data is formatted.
+#Verifying Configuration
 
-I proceeded to use a query to investigate any failed SSH logins for the root account on the mail server: index = “main” host = “mailsv” fail* root
+![4](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/4.png)
 
-This query retrieves all events containing the word "fail" for the root user in the main index, specifically for events under the mailsv network host, where SSH logins are processed:
+> Figure 2: Viewing the Access Control Lists for the testfile
 
-![Splunk3](https://fastpacer1.github.io/portfolio/assets/images/Splunk3.png)
+This figure shows the command getfacl testfile being used to display the access control list configuration for the file.
 
-## Chronicle
+#Testing Access Control
 
-**Scenario:**
+![5](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/5.png)
 
-You are a security analyst at a financial services company. You receive an alert that an employee received a phishing email in their inbox. You review the alert and identify a suspicious domain name contained in the email's body: signin.office365x24.com. You need to determine whether any other employees have received phishing emails containing this domain and whether they have visited the domain. You will use Chronicle to investigate this domain.
+> Figure 3: Viewing the testfile after configuring the access control for it
 
-Given this scenario, I searched for the domain used in the phishing email:
+This figure shows Bob using the command nano testfile.txt to open the file.
 
-![Chronicle1](https://fastpacer1.github.io/portfolio/assets/images/Chronicle1.png)
+![6](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/6.png)
 
-I proceeded to evaluate the search results in Chronicle for the identified domain: 
+> Figure 3.1: Editing the file as a user with permissions
 
-![Chronicle2](https://fastpacer1.github.io/portfolio/assets/images/Chronicle2.png)
+This figure shows that Bob can write to the testfile.txt file because he has the necessary permissions..
 
-- VT Context: This Section provides the VirusTotal information that is available for the domain.
-- WHOIS: This section summarizes information about the domain using WHOIS, a free public directory that provides details about registered domain names, including the domain owner’s name and contact information.
-- Prevalence: This section includes a graph that outlines the historical prevalence of the domain. 
-- RESOLVED IPS: This section provides additional context about the domain, including the IP address mapped to signin.office365x24.com, which resolved to 40.100.174.34.
-- SIBLING DOMAINS: This section provides additional context about the domain. Sibling domains share a common top-level or parent domain. In this case login.office365x24.com shares the same parent domain, office365x24.com, with the domain under investigation, -signin.office365x24.com.
-- TIMELINE: This section shows information regarding events and interactions made with this domain
-- ASSETS: This section provides a list of the assets that have accessed the domain
+![7](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/7.png)
 
-I clicked on VT CONTEXT to evaluate the available VirusTotal information about this domain. 10 security vendors flagged the domain as malicious:
+> Figure 3.2: Reading the file with bob who has permissions to do that
 
-![Chronicle3](https://fastpacer1.github.io/portfolio/assets/images/Chronicle3.png)
+This figure shows Bob successfully reading the file using the cat command.
 
-I then proceeded to investigate the top level domain by performing a new search:
+![8](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/8.png)
+![9](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/9.png)
 
-![Chronicle4](https://fastpacer1.github.io/portfolio/assets/images/Chronicle4.png)
+> Figure 3.3: Alice being unable to write into the testfile
 
-The VirusTotal for the top domain also returned 5 vendors marking the domain as malicious: 
+This figure shows that Alice cannot write to the file because she only has read permissions.
 
-![Chronicle5](https://fastpacer1.github.io/portfolio/assets/images/Chronicle5.png)
+![10](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/10.png)
 
-Using the TIMELINE tab, I identified the POST request, indicating that data was sent to the malicious domain. This suggests a potential successful phishing attempt:
+> Figure 3.4: Alice being able to view the file
 
-![Chronicle6](https://fastpacer1.github.io/portfolio/assets/images/Chronicle6.png)
+This figure shows Alice using the cat command to read the file, as she has the necessary read permissions.
 
-Following this, I checked the resolved IP address for POST requests, here we can see three different employees sent POST requests suggesting there was a successful phishing attempt:
+![11](https://fastpacer1.github.io/portfolio/assets/images/AccessControlListProject/11.png)
 
-![Chronicle7](https://fastpacer1.github.io/portfolio/assets/images/Chronicle7.png)
+> Figure 3.5: Kent attempting to view a file without the proper permissions
 
-**Reflection**
-
-In this Security Investigation, I used Splunk and Chronicle to investigate security threats in two different scenario
-
-In this Security Investigation, I leveraged Splunk and Chronicle to investigate security threats in two different scenarios: detecting unauthorized SSH login attempts and analyzing phishing domain activity. This hands-on experience strengthened my ability to query, analyze, and interpret security data effectively.
+This figure shows that Kent cannot read the file because he is classified as "other," and the file's permissions do not allow access to others.
