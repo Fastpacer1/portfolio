@@ -21,7 +21,7 @@ title                    : "Adebiyi Adehinmoye"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Adebiyi Adehinmoye"
-description              : "Cybersecurity Student at Purdue University"
+description              : "My name is Adebiyi Emmanuel Adehinmoye. I am a dedicated and driven cybersecurity student at Purdue University with a strong passion for protecting digital assets and securing critical systems. I thrive on analyzing complex security challenges and developing strategic solutions to mitigate risks. My academic journey has equipped me with a solid foundation in cybersecurity principles, and I am eager to apply my knowledge to real world scenarios. I am committed to continuous learning and growth in this field, and I look forward to contributing my skills to safeguard organizations and individuals from cyber threats."
 url                      : #
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
