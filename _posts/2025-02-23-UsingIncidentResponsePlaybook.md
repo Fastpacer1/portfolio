@@ -17,4 +17,4 @@ and resolve the alert.
 
 This incident response begins with recieving an alert ticket which indicates a potential phising attempt. I procceded to analyze the ticket.
 
-![Image1](https://fastpacer1.github.io/portfolio/assets/images/Playbook/image1.png)
+![image1](https://fastpacer1.github.io/portfolio/assets/images/Playbook/image1.png)
