@@ -19,6 +19,6 @@ This incident response begins with recieving an alert ticket which indicates a p
 
 > I proceeded to analyze the ticket, which is Step 2 of the phishing incident response playbook, following the receipt of the phishing alert outlined in Step 1.
 
-![image1](https://fastpacer1.github.io/portfolio/assets/images/Playbook/image1.png)
+![image1](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image1.png)
 
 Following the analysis of the Alert ticket, I reviewed the Phising incident response playbook 
