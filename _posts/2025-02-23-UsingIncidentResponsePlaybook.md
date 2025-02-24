@@ -48,4 +48,4 @@ The file has been identified by 60 vendors as malicious. Using the playbook i de
 
 **Reflection**
 
-In this activity, I investigated a phishing attempt using an incident response playbook. This project provided hands-on experience in applying a playbook to guide the response process.
+In this activity, I investigated a phishing attempt using an incident response playbook. This project provided hands on experience in applying a playbook to guide the response process.
