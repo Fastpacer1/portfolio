@@ -23,4 +23,4 @@ This incident response begins with recieving an alert ticket which indicates a p
 
 Following the analysis of the Alert ticket, I reviewed the phising incident response playbook to determing the next steps.
 
-
+![image2](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image2.png)
