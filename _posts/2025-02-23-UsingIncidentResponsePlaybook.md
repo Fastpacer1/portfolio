@@ -29,5 +29,7 @@ Following the analysis of the Alert ticket, I reviewed the phising incident resp
 
 ![image2](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image2.png)
 
-After reviewing the phising incident response playbook i can determing that the alert contained an attachment, which can be seen as an executable file.
-To determine whether the attachment was malicioys 
+After reviewing the phising incident response playbook i can determing that the alert contained an attachment, which can be seen to be an executable file, a hash was also included in the alert, and labled as malicious.
+To determine whether the attachment was malicious i evaluated the header and body of the email which contained multiple spelling errors, this is an initial indicator of a phising attempt, but further investigation would be needed.
+
+*I proceeded to investigate the file hash using VirusTotal.*
