@@ -33,3 +33,10 @@ After reviewing the phising incident response playbook i can determing that the 
 To determine whether the attachment was malicious i evaluated the header and body of the email which contained multiple spelling errors, this is an initial indicator of a phising attempt, but further investigation would be needed.
 
 *I proceeded to investigate the file hash using VirusTotal.*
+
+![image4](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image4.png)
+
+The file has been identified by 60 vendors as malicious. Using the playbook i determined that this needed to be escalated to notify a level-two SOC analyst, while providing context as to why i chose to escalate the ticket.
+
+![image5](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image5.png)
+
