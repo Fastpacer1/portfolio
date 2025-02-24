@@ -21,7 +21,7 @@ This incident response begins with recieving an alert ticket which indicates a p
 
 ![image1](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image1.png)
 
->> *Figure 1: Alert Ticket*
+> *Figure 1: Alert Ticket*
 
 ![image3](https://fastpacer1.github.io/portfolio/assets/images/IncidentResponce/image3.png)
 
