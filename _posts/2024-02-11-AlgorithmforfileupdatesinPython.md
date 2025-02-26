@@ -71,7 +71,7 @@ with open(import_file, "w") as file:
   file.write(ip_addresses)
 ```
 
-## Final Code
+### Full Code
 ```
 # Open the file that contains the allow list
 
