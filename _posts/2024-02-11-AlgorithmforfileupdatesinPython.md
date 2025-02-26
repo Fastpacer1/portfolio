@@ -18,24 +18,39 @@ There is an allow list for IP addresses permitted to sign into the restricted su
 Your task is to create an algorithm that uses Python code to check whether the allow list contains any IP addresses identified on the remove list. If so, you should remove those IP addresses from the file containing the allow list.
 
 
-```import_file = "allow_list.txt"
+```
+# Open the file that contains the allow list
+import_file = "allow_list.txt"
 
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 
+#Read the file contents
 with open(import_file, "r") as file:
   ip_addresses = file.read()
-
+# Convert the string into a list
 ipaddresses = ip_addresses.split()
 
+# Iterate through the remove list
 for i in ip_addresses:
+# Remove IP addresses that are on the remove list
   if i in remove_list
     ip_addresses.remove(i)
 
 ip_addresses = " ".join(ip_addresses)
-
+# Update the file with the revised list of IP addresses 
 with open(import_file, "w") as file:
   file.write(ip_addresses)
 ```
 
+**Project Description**
+This project involves automating the management proccess of an allowed list for restricted network access in a healthcare setting. The script enabled only authorized employees to gain access to sensitive patient records
+by removing the IP addresses placed in the remove list.
+
 **Summary**
 
+The python scripts reads an allowed list of IP addresses from "allow_list", checks for any matches againts the defined remove list, and removes all unauthorized IP addresses. 
+The updated list is then written back to the original file. The script follows the structure:
+
+1. Read the file and convert the contents into a list
+2. Filters out any IP addresses found in the remove list
+3. Rewrites the updated allowed list back to the original file.
