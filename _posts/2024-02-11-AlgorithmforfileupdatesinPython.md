@@ -25,14 +25,13 @@ Your task is to create an algorithm that uses Python code to check whether the a
 import_file = "allow_list.txt"
 ```
 
-write here
+> Inputting preprepared remove list:
 
 ```
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
 ```
 
-write here
-
+> I then proceeded to use a with statement to open the file:
 
 ```
 #Read the file contents
@@ -40,14 +39,14 @@ with open(import_file, "r") as file:
   ip_addresses = file.read()
 ```
 
-write here
+> Next, I converted the IP addresses into a list to allow for the removal of individual entries.
 
 ```
 # Convert the string into a list
 ipaddresses = ip_addresses.split()
 ```
 
-write here
+> The next step involves iterating through the list to find IP addresses in the remove list and delete them.
 
 ```
 # Iterate through the remove list
@@ -58,13 +57,14 @@ for i in ip_addresses:
     ip_addresses.remove(i)
 ```
 
-write here
+> The next step is converting the current IP address output into a string format so it can be written to a text file.
 
 ```
-ip_addresses = " ".join(ip_addresses)
+# Converting the ip addresses back to string
+ip_addresses = "\n".join(ip_addresses)
 ```
 
-write here
+> I then used the with statement and .write() to update the file:
 
 ```
 # Update the file with the revised list of IP addresses 
