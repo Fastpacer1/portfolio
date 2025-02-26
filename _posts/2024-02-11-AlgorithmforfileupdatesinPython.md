@@ -43,6 +43,7 @@ with open(import_file, "w") as file:
 ```
 
 **Project Description**
+
 This project involves automating the management proccess of an allowed list for restricted network access in a healthcare setting. The script enabled only authorized employees to gain access to sensitive patient records
 by removing the IP addresses placed in the remove list.
 
