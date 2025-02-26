@@ -59,7 +59,6 @@ for i in ip_addresses:
 
 write here
 
-
 ```
 ip_addresses = " ".join(ip_addresses)
 ```
@@ -71,6 +70,35 @@ write here
 with open(import_file, "w") as file:
   file.write(ip_addresses)
 ```
+
+## Final Code
+```
+# Open the file that contains the allow list
+
+import_file = "allow_list.txt"
+remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
+
+#Read the file contents
+with open(import_file, "r") as file:
+  ip_addresses = file.read()
+
+# Convert the string into a list
+ipaddresses = ip_addresses.split()
+
+# Iterate through the remove list
+for i in ip_addresses:
+
+# Remove IP addresses that are on the remove list
+  if i in remove_list:
+    ip_addresses.remove(i)
+
+ip_addresses = " ".join(ip_addresses)
+
+# Update the file with the revised list of IP addresses 
+with open(import_file, "w") as file:
+  file.write(ip_addresses)
+```
+
 
 **Project Description**
 
