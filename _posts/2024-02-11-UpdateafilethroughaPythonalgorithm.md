@@ -16,3 +16,18 @@ The contents of the file are based on who is working with personal patient recor
 There is an allow list for IP addresses permitted to sign into the restricted subnetwork. There's also a remove list that identifies which employees you must remove from this allow list.
 
 Your task is to create an algorithm that uses Python code to check whether the allow list contains any IP addresses identified on the remove list. If so, you should remove those IP addresses from the file containing the allow list.
+
+
+<code>
+# Assign `import_file` to the name of the file 
+
+import_file = "allow_list.txt"
+
+# Assign `remove_list` to a list of IP addresses that are no longer allowed to access restricted information. 
+
+remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
+
+# First line of `with` statement
+
+with open(import_file, "r") as file:
+</code>
