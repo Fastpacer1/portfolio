@@ -1,5 +1,5 @@
 ---
-title: "Update a file through a Python algorithm"
+title: "Algorithm for file updates in Python"
 classes: wide
 date: 2025-02-26
 categories: 
@@ -18,12 +18,24 @@ There is an allow list for IP addresses permitted to sign into the restricted su
 Your task is to create an algorithm that uses Python code to check whether the allow list contains any IP addresses identified on the remove list. If so, you should remove those IP addresses from the file containing the allow list.
 
 
-<code>
+`import_file = "allow_list.txt"`
 
-import_file = "allow_list.txt"
+`remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]`
 
-remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
+`with open(import_file, "r") as file:
+  ip_addresses = file.read()`
 
-with open(import_file, "r") as file:
+`ipaddresses = ip_addresses.split()`
 
-</code>
+`for i in ip_addresses:
+  if i in remove_list
+    ip_addresses.remove(i)`
+
+`ip_addresses = " ".join(ip_addresses)`
+
+`with open(import_file, "w") as file:
+  file.write(ip_addresses)`
+
+
+**Summary**
+
