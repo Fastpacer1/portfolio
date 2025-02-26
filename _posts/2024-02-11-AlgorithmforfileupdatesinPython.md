@@ -24,17 +24,29 @@ Your task is to create an algorithm that uses Python code to check whether the a
 import_file = "allow_list.txt"
 ```
 
+write here
+
+```
 remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.58.57"]
+```
+
+write here
+
+
 ```
 #Read the file contents
 with open(import_file, "r") as file:
   ip_addresses = file.read()
 ```
 
+write here
+
 ```
 # Convert the string into a list
 ipaddresses = ip_addresses.split()
 ```
+
+write here
 
 ```
 # Iterate through the remove list
@@ -44,9 +56,15 @@ for i in ip_addresses:
   if i in remove_list:
     ip_addresses.remove(i)
 ```
+
+write here
+
+
 ```
 ip_addresses = " ".join(ip_addresses)
 ```
+
+write here
 
 ```
 # Update the file with the revised list of IP addresses 
