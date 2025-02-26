@@ -17,6 +17,7 @@ There is an allow list for IP addresses permitted to sign into the restricted su
 
 Your task is to create an algorithm that uses Python code to check whether the allow list contains any IP addresses identified on the remove list. If so, you should remove those IP addresses from the file containing the allow list.
 
+At the beginning of the algorithm, I opened the allow_list.txt file and I assigned the filename as a string to the variable called import_file:
 
 ```
 # Open the file that contains the allow list
