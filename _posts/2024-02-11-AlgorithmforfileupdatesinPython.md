@@ -35,7 +35,7 @@ ipaddresses = ip_addresses.split()
 for i in ip_addresses:
 
 # Remove IP addresses that are on the remove list
-  if i in remove_list
+  if i in remove_list:
     ip_addresses.remove(i)
 
 ip_addresses = " ".join(ip_addresses)
