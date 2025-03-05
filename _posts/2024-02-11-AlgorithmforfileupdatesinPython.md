@@ -86,7 +86,7 @@ with open(import_file, "r") as file:
 # Convert the string into a list
 ipaddresses = ip_addresses.split()
 
-# Iterate through the remove list
+# Iterate through the allow list
 for i in ip_addresses:
 
 # Remove IP addresses that are on the remove list
