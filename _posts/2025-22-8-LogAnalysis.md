@@ -34,3 +34,52 @@ Detected repeated login attempts against the /rest/user/login endpoint, indicati
 
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/bruteforce.png)
 > Brute-force attack
+
+## SQL Injection Exploit
+
+Identified /rest/products/search endpoint as vulnerable to SQL injection.
+
+![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/sqlinjection.png)
+
+> The attacker used the q parameter to execute SQL injection attacks.
+
+## Unauthorized File Retrieval Attempt
+
+The attacker attempted to use ftp to retrieve files but failed.
+
+![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/ftp.png) 
+
+# Phase 2
+
+## Objective: Perform deeper log analysis to trace attacker movement, analyze response codes, and identify abnormal query strings.
+
+## Website Scraping Activity
+
+Detected attacker scraping user email addresses through the /reviews section of the website.
+
+![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/reviews.png) 
+> 
+
+## Brute-Force Attack Result
+
+Brute-force attempt against /rest/user/login was successful.
+
+![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/timestamp.png) 
+>
+
+## User Information Disclosure
+
+The SQL injection vulnerability allowed the attacker to retrieve sensitive user information including emails and passwords.
+
+![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/email,password.png) 
+
+
+## File Download Attempts
+
+
+
+## File Retrieval Method
+
+
+
+## Shell Access Obtained
