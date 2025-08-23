@@ -45,9 +45,9 @@ Identified /rest/products/search endpoint as vulnerable to SQL injection.
 
 ## Unauthorized File Retrieval Attempt
 
-The attacker attempted to use ftp to retrieve files but failed.
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/ftp.png) 
+
+The attacker attempted to use ftp to retrieve files but failed.
 
 # Phase 2
 
@@ -55,45 +55,40 @@ The attacker attempted to use ftp to retrieve files but failed.
 
 ## Website Scraping Activity
 
-Detected attacker scraping user email addresses through the /reviews section of the website.
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/reviews.png) 
-> 
+
+Detected attacker scraping user email addresses through the /reviews section of the website.
 
 ## Brute-Force Attack Result
 
-Brute-force attempt against /rest/user/login was successful.
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/timestamp.png) 
->
+
+Brute-force attempt against /rest/user/login was successful.
 
 ## User Information Disclosure
 
-The SQL injection vulnerability allowed the attacker to retrieve sensitive user information including emails and passwords.
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/email,password.png) 
->
+
+The SQL injection vulnerability allowed the attacker to retrieve sensitive user information including emails and passwords.
 
 ## File Download Attempts
 
-From the vulnerable endpoint, the attacker attempted to download files such as /www-data.bak and /coupons_2013.md.bak.
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/ftp.png)
->
+
+From the vulnerable endpoint, the attacker attempted to download files such as /www-data.bak and /coupons_2013.md.bak.
 
 ## File Retrieval Method
 
-Service: FTP 
-Account Used: anonymous
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/anon.png)
->
+
+Service: FTP 
+
+Account Used: anonymous
 
 ## Shell Access Obtained
 
-Service: SSH
-Username: wwww-data
-
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/username.png)
->
 
+Service: SSH
+
+Username: wwww-data
