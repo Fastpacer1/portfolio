@@ -14,6 +14,6 @@ Your tasks are:
 * What endpoints were vulnerable
 * What sensitive data was accessed and stolen from the environment
 
-An IT team has sent you a zip file containing logs from the server. Download the attached file, type in "I am ready!" and get to work! There's no time to lose!
+An IT team has sent you a zip file containing logs from the server.
 
 ![1](https://fastpacer1.github.io/portfolio/assets/images/BlueTea/nmap.png)
